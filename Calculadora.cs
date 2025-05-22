@@ -33,7 +33,8 @@ namespace Calculadora {
             double resultado;
 
             while (segundo <= 0) {
-                Console.Write("Divisão inválida, tente divisor acima de 0: ");                
+                Console.Write("Divisão inválida, tente divisor acima de 0: ");
+                segundo = double.Parse(Console.ReadLine());
             }
 
             resultado = primeiro / segundo;
