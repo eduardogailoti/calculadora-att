@@ -14,43 +14,36 @@ namespace Calculadora {
             Operacao = operacao;
         }
 
-        public double Somar(double primeiro, double segundo) {
-            double resultado = primeiro + segundo;
+        public double Somar() {
+            double resultado = PrimeiroNumero + SegundoNumero;
             return resultado;
         }
 
-        public double Subtracao(double primeiro, double segundo) {
-            double resultado = primeiro - segundo;
+        public double Subtracao() {
+            double resultado = PrimeiroNumero - SegundoNumero;
             return resultado;
         }
 
-        public double Multiplicacao(double primeiro, double segundo) {
-            double resultado = primeiro * segundo;
+        public double Multiplicacao() {
+            double resultado = PrimeiroNumero * SegundoNumero;
             return resultado;
         }
 
-        public double Divisao(double primeiro, double segundo) {
-            double resultado;
-
-            while (segundo <= 0) {
-                Console.Write("Divisão inválida, tente divisor acima de 0: ");
-                segundo = double.Parse(Console.ReadLine());
-            }
-
-            resultado = primeiro / segundo;
+        public double Divisao() {
+            double resultado = PrimeiroNumero / SegundoNumero;
             return resultado;
         }
 
-        public double Escolha(string operacao, double primeiro, double segundo) {
-            switch (operacao) {
+        public double Escolha() {
+            switch (Operacao) {
                 case "+":
-                    return Somar(primeiro, segundo);                   
+                    return Somar();
                 case "-":
-                    return Subtracao(primeiro, segundo);                    
+                    return Subtracao();                    
                 case "*":
-                    return Multiplicacao(primeiro, segundo);                    
+                    return Multiplicacao();                    
                 case "/":
-                    return Divisao(primeiro, segundo);                    
+                    return Divisao();                    
                 default:
                     Console.WriteLine("Operação inválida!");                   
                     return double.NaN;
